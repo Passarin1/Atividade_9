@@ -1,114 +1,125 @@
 /* Geral */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 header, footer {
-    background-color: #5a5a5a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
+  background-color: #5a5a5a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Layout 1 */
-.layout1 .menu {
-    width: 20%;
-    float: left;
-    background-color: #b0b0b0;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.layout1 .content {
-    width: 50%;
-    float: left;
-    padding: 20px;
-}
-.layout1 .ads {
-    width: 20%;
-    float: left;
-    padding: 20px;
-    font-weight: bold;
-}
-.menu-items div, .ads div {
-    background-color: #d0d0d0;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: center;
-}
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+/* Estilização do Menu Numerado no Header */
+.menu-numeros {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Layout 2 */
-.layout2 header {
-    background-color: #444;
-    padding: 10px;
-    text-align: center;
-}
-.layout2 nav {
-    background-color: #222;
-    overflow: hidden;
-}
-.layout2 nav div {
-    float: left;
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-.layout2 .grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: 5px;
-    margin-top: 20px;
-    justify-content: center;
-}
-.layout2 .grid div {
-    background-color: grey;
-    width: 50px;
-    height: 50px;
+.menu-numeros li {
+  margin: 0 10px;
 }
 
-/* Layout 3 */
-.layout3 header {
-    background-color: #444;
-    padding: 20px;
-    text-align: center;
+.menu-numeros a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
-.layout3 nav {
-    background-color: #333;
-    padding: 15px;
-    text-align: center;
+
+.menu-numeros a:hover {
+  background-color: #777;
 }
-.layout3 nav div {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 10px;
-    background-color: #555;
-    color: white;
-    cursor: pointer;
+
+/* Menu Secundário (abaixo do menu numerado) */
+.menu-secundario {
+  background-color: #444;
+  padding: 10px;
 }
-.layout3 .cards {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+
+.menu-secundario nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-.layout3 .card {
-    background-color: #d0d0d0;
-    width: 30%;
-    padding: 15px;
+
+.menu-secundario nav ul li {
+  margin: 0 15px;
 }
-.layout3 footer {
-    background-color: #444;
-    padding: 20px;
-    text-align: center;
+
+.menu-secundario nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #666;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-secundario nav ul li a:hover {
+  background-color: #888;
+}
+
+/* Cards Section (Cards Principais) */
+.main-content {
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #d0d0d0;
+  width: 30%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #444;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Classe adicional usada no menu para layout flexível */
+.caixa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
